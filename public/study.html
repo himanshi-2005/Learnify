@@ -3,20 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
-      content="Create summaries, key points, and practice questions from your study notes."
+      content="Create summaries, key points and practice questions from your study notes."
     />
-    <title>Student Study Helper | Study</title>
+
+    <!-- Page title -->
+    <title>Learnify | Study</title>
+
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
+
   <body>
+    <!-- Main site navigation -->
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="index.html"
-          ><span class="brand-icon">S</span>Student Study Helper</a
-        ><button
+        <!-- Website logo and home link -->
+        <a class="brand" href="index.html">
+          <span class="brand-icon">L</span>Learnify
+        </a>
+
+        <!-- menu button -->
+        <button
           class="menu-toggle"
           type="button"
           aria-label="Open navigation"
@@ -24,57 +34,82 @@
         >
           Menu
         </button>
+
+        <!-- Main navigation links -->
         <nav class="main-nav" aria-label="Main navigation">
-          <a href="index.html">Home</a><a href="study.html">Study</a
-          ><a href="history.html">History</a><a href="about.html">About</a>
+          <a href="index.html">Home</a>
+          <a href="study.html">Study</a>
+          <a href="history.html">History</a>
+          <a href="about.html">About</a>
         </nav>
       </div>
     </header>
+
     <main class="page-main">
+      <!-- Back button to return to the home page -->
+      <a class="back-button" href="index.html" aria-label="Back to home">
+        &larr;
+      </a>
+
+      <!-- Page heading explaining what the user can do here -->
       <section class="container page-heading">
         <span class="eyebrow">Your study workspace</span>
-        <h1>Create Your Study Helper</h1>
+        <h1>Create With Learnify</h1>
         <p>
           Add your class notes below and turn them into friendly, focused study
           materials.
         </p>
       </section>
+
+      <!-- Main study input and results area -->
       <section class="container">
+        <!-- Card where users enter their notes -->
         <div class="input-card">
           <div class="label-row">
-            <label for="studyNotes">Enter Your Study Notes</label
-            ><span class="optional-label">Up to 10,000 characters</span>
+            <label for="studyNotes">Enter Your Study Notes</label>
+            <span class="optional-label">Up to 10,000 characters</span>
           </div>
+
+          <!-- Text area for pasted lecture notes -->
           <textarea
             id="studyNotes"
             maxlength="10000"
             placeholder="Paste your lecture notes here..."
             aria-describedby="characterCount noteError"
           ></textarea>
+
+          <!-- Shows validation errors and live character count -->
           <div class="textarea-meta">
-            <span id="noteError" class="error-message" role="alert"></span
-            ><span id="characterCount">0 / 10,000 characters</span>
+            <span id="noteError" class="error-message" role="alert"></span>
+            <span id="characterCount">0 / 10,000 characters</span>
           </div>
+
+          <!-- Starts AI generation for summary, key points and questions -->
           <button
             id="generateButton"
             class="button button-primary full-mobile"
             type="button"
           >
-            <span>AI</span> Generate Study Help
+            Generate
           </button>
         </div>
+
+        <!-- Loading message shown while notes are being processed -->
         <div id="loadingState" class="loading-card hidden" aria-live="polite">
           <span class="spinner"></span>
           <div>
             <strong>Analyzing your notes...</strong>
-            <p>Preparing your summary, key points, and practice questions.</p>
+            <p>Preparing your summary, key points and practice questions.</p>
           </div>
         </div>
+
+        <!-- Results section appears after study material is generated -->
         <section
           id="resultsSection"
           class="results-section hidden"
           aria-live="polite"
         >
+          <!-- Results header and status badge -->
           <div class="results-heading">
             <div>
               <span class="eyebrow">AI output</span>
@@ -82,7 +117,10 @@
             </div>
             <span class="status-badge">Generated</span>
           </div>
+
+          <!-- Cards displaying the generated study materials -->
           <div class="results-grid">
+            <!-- Generated summary output -->
             <article class="result-card summary-card">
               <div class="result-title">
                 <span class="feature-icon blue small">AI</span>
@@ -91,6 +129,7 @@
               <p id="summaryOutput"></p>
             </article>
 
+            <!-- Generated key points output -->
             <article class="result-card">
               <div class="result-title">
                 <span class="feature-icon purple small">KP</span>
@@ -99,6 +138,7 @@
               <ul id="keyPointsOutput" class="styled-list"></ul>
             </article>
 
+            <!-- Generated practice questions output -->
             <article class="result-card">
               <div class="result-title">
                 <span class="feature-icon green small">Q</span>
@@ -107,29 +147,33 @@
               <ol id="questionsOutput" class="question-list"></ol>
             </article>
           </div>
+
+          <!-- Buttons for saving or cancelling the current study session -->
           <div class="save-row">
             <button
               id="saveButton"
               class="button button-secondary"
               type="button"
             >
-              Save Study Session</button
-            ><span
-              id="saveMessage"
-              class="success-message"
-              role="status"
-            ></span>
+              Save Study Session
+            </button>
+
+            <button
+              id="deleteButton"
+              class="button button-danger"
+              type="button"
+            >
+              Cancel Study Session
+            </button>
+
+            <!-- Message shown after saving a session -->
+            <span id="saveMessage" class="success-message" role="status"></span>
           </div>
         </section>
       </section>
     </main>
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <a class="brand footer-brand" href="index.html"
-          ><span class="brand-icon">S</span>Student Study Helper</a
-        >
-        <p>Sample AI output is used until the backend is connected.</p>
-      </div>
-    </footer>
+
+    <!-- Footer  -->
+    <footer class="site-footer"></footer>
   </body>
 </html>

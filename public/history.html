@@ -3,22 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Review previous Student Study Helper sessions."
-    />
-    <title>Student Study Helper | History</title>
+
+    <meta name="description" content="Review previous Learnify sessions." />
+
+    <!-- page title -->
+    <title>Learnify | History</title>
+
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
 
   <body>
+    <!-- Main navigation header -->
     <header class="site-header">
       <div class="container nav-wrap">
+        <!-- Website logo -->
         <a class="brand" href="index.html">
-          <span class="brand-icon">S</span>Student Study Helper
+          <span class="brand-icon">L</span>Learnify
         </a>
 
+        <!-- menu button -->
         <button
           class="menu-toggle"
           type="button"
@@ -28,6 +32,7 @@
           Menu
         </button>
 
+        <!-- Navigation links -->
         <nav class="main-nav" aria-label="Main navigation">
           <a href="index.html">Home</a>
           <a href="study.html">Study</a>
@@ -38,6 +43,12 @@
     </header>
 
     <main class="page-main">
+      <!-- Back button to return to the home page -->
+      <a class="back-button" href="index.html" aria-label="Back to home">
+        &larr;
+      </a>
+
+      <!-- Page heading and action buttons -->
       <section class="container page-heading heading-row">
         <div>
           <span class="eyebrow">Saved study library</span>
@@ -45,22 +56,77 @@
           <p>Return to saved topics and continue your revision.</p>
         </div>
 
-        <a href="study.html" class="button button-primary">+ New Session</a>
+        <!-- Buttons for creating or deleting study sessions -->
+        <div class="history-actions">
+          <a href="study.html" class="button button-primary"> + New Session </a>
+
+          <button
+            id="clearHistoryButton"
+            class="button button-danger"
+            type="button"
+          >
+            Delete All History
+          </button>
+        </div>
       </section>
 
+      <!-- Container where saved history cards are displayed dynamically -->
       <section class="container">
         <p id="historyMessage">Loading saved study sessions...</p>
         <div id="historyList" class="history-grid"></div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <a class="brand footer-brand" href="index.html">
-          <span class="brand-icon">S</span>Student Study Helper
-        </a>
-        <p>Saved sessions are loaded from Azure Blob Storage.</p>
+    <!-- Dark overlay shown behind the confirmation modal -->
+    <div
+      id="modalOverlay"
+      class="hidden"
+      style="
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 99;
+      "
+    ></div>
+
+    <!-- Confirmation modal displayed before deleting history -->
+    <div
+      id="confirmModal"
+      class="hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <!-- Modal title  -->
+      <h2
+        id="modalTitle"
+        style="
+          margin: 0 0 0.5rem;
+          font-size: 18px;
+          font-weight: 500;
+          color: black;
+        "
+      ></h2>
+
+      <!-- Warning message shown to the user -->
+      <p id="modalMessage">
+        This action cannot be undone. The study session will be permanently
+        removed from your saved history.
+      </p>
+
+      <!-- Modal action buttons -->
+      <div class="modal-actions">
+        <button id="modalCancelBtn" class="modal-btn modal-btn-secondary">
+          Cancel
+        </button>
+
+        <button id="modalConfirmBtn" class="modal-btn modal-btn-danger">
+          Delete
+        </button>
       </div>
-    </footer>
+    </div>
+
+    <!-- Footer  -->
+    <footer class="site-footer"></footer>
   </body>
 </html>

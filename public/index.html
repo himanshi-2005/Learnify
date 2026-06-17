@@ -1,76 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Student Study Helper turns class notes into summaries, key points, and quiz questions.">
-  <title>Student Study Helper | Home</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html"><span class="brand-icon">S</span><span>Student Study Helper</span></a>
-      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a><a href="study.html">Study</a><a href="history.html">History</a><a href="about.html">About</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <main>
-    <section class="hero">
-      <span class="doodle doodle-star" aria-hidden="true">+</span>
-      <span class="doodle doodle-circle" aria-hidden="true"></span>
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <span class="eyebrow">Your friendly AI study buddy</span>
-          <h1>Turn Your Notes Into <span>Smart Study Material</span></h1>
-          <p>Paste your class notes and let AI create summaries, key points, and quiz questions for easy studying.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="study.html">Start Studying <span aria-hidden="true">-&gt;</span></a>
-            <a class="button button-secondary" href="history.html">View History</a>
+    <meta
+      name="description"
+      content="Learnify turns class notes into summaries, key points, and quiz questions."
+    />
+
+    <!-- Page title -->
+    <title>Learnify | Home</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Main navigation header -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <!-- Website logo and home link -->
+        <a class="brand" href="index.html">
+          <span class="brand-icon">L</span>
+          <span>Learnify</span>
+        </a>
+
+        <!-- navigation toggle button -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+
+        <!-- navigation links -->
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="study.html">Study</a>
+          <a href="history.html">History</a>
+          <a href="about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- section introducing Learnify -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">Your Learnify study workspace</span>
+
+            <h1>
+              Learnify Turns Notes Into
+              <span>Smart Study Material</span>
+            </h1>
+
+            <p>
+              Paste your class notes and let Learnify create summaries, key
+              points, and quiz questions for easy studying.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="study.html">
+                Start Studying
+              </a>
+            </div>
           </div>
-          <div class="hero-trust"><span class="trust-dots"><i></i><i></i><i></i></span><span>Simple, quick, and made for students</span></div>
-        </div>
-        <div class="hero-image-wrap">
-          <span class="image-tape tape-one" aria-hidden="true"></span>
-          <span class="image-tape tape-two" aria-hidden="true"></span>
-          <img src="student-hero.png" alt="Two cheerful students standing with a large yellow pencil">
-          <div class="image-note note-top"><span>AI</span> Study smarter</div>
-          <div class="image-note note-bottom"><span>3</span> Tools in one place</div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section features-section">
-      <div class="container">
-        <div class="section-heading"><span class="eyebrow">Everything you need</span><h2>A happier way to review your notes</h2><p>Turn one page of class notes into three useful study tools.</p></div>
-        <div class="card-grid three-columns">
-          <article class="feature-card peach-card"><div class="feature-icon blue">AI</div><span class="card-number">01</span><h3>AI Summary</h3><p>Get a short, clear overview of the main ideas in your notes.</p><div class="mini-lines"><i></i><i></i><i></i></div></article>
-          <article class="feature-card blue-card"><div class="feature-icon pink">KP</div><span class="card-number">02</span><h3>Key Points</h3><p>Spot important facts, terms, and concepts that need attention.</p><div class="mini-checks"><i></i><i></i><i></i></div></article>
-          <article class="feature-card mint-card"><div class="feature-icon green">Q</div><span class="card-number">03</span><h3>Quiz Questions</h3><p>Practice what you learned with questions based on your notes.</p><div class="mini-answers"><i>A</i><i>B</i><i class="active">C</i></div></article>
+          <!-- main page illustration -->
+          <div class="hero-image-wrap">
+            <img
+              src="learnify-hero.png"
+              alt="Stack of books and study tools for Learnify"
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="workflow-section">
-      <div class="container">
-        <div class="section-heading"><span class="eyebrow">How it works</span><h2>Three easy steps</h2></div>
-        <div class="workflow-card">
-          <div class="workflow-step"><span class="workflow-icon notes-icon">1</span><div><strong>Notes</strong><span>Paste your class material</span></div></div>
-          <span class="workflow-arrow" aria-hidden="true">-&gt;</span>
-          <div class="workflow-step"><span class="workflow-icon ai-icon">2</span><div><strong>AI Helper</strong><span>Important ideas are organized</span></div></div>
-          <span class="workflow-arrow" aria-hidden="true">-&gt;</span>
-          <div class="workflow-step"><span class="workflow-icon result-icon">3</span><div><strong>Study Results</strong><span>Review, practice, and save</span></div></div>
+      <!-- Features section highlighting the app's capabilities -->
+      <section class="section features-section">
+        <div class="container">
+          <!-- Section heading -->
+          <div class="section-heading">
+            <span class="eyebrow">Everything you need</span>
+            <h2>A happier way to review your notes</h2>
+            <p>Turn one page of class notes into three useful study tools.</p>
+          </div>
+
+          <!-- Grid containing the three feature cards -->
+          <div class="card-grid three-columns">
+            <!-- Feature 1- AI-generated summary -->
+            <article class="feature-card peach-card">
+              <div class="feature-icon blue">AI</div>
+              <span class="card-number">01</span>
+              <h3>AI Summary</h3>
+              <p>
+                Get a short, clear overview of the main ideas in your notes.
+              </p>
+              <div class="mini-lines"><i></i><i></i><i></i></div>
+            </article>
+
+            <!-- Feature 2- Key point extraction -->
+            <article class="feature-card blue-card">
+              <div class="feature-icon pink">KP</div>
+              <span class="card-number">02</span>
+              <h3>Key Points</h3>
+              <p>
+                Spot important facts, terms, and concepts that need attention.
+              </p>
+              <div class="mini-checks"><i></i><i></i><i></i></div>
+            </article>
+
+            <!-- Feature 3- Quiz generation -->
+            <article class="feature-card mint-card">
+              <div class="feature-icon green">Q</div>
+              <span class="card-number">03</span>
+              <h3>Quiz Questions</h3>
+              <p>
+                Practice what you learned with questions based on your notes.
+              </p>
+              <div class="mini-answers">
+                <i>A</i>
+                <i>B</i>
+                <i class="active">C</i>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="cta-section"><div class="container cta-card"><div><span class="eyebrow">Ready when you are</span><h2>Make your next study session easier</h2><p>Bring your notes and create a simple study guide in seconds.</p></div><a class="button button-navy" href="study.html">Create Study Help</a></div></section>
-  </main>
+      <section class="cta-section">
+        <div class="container cta-card">
+          <div>
+            <span class="eyebrow">Ready when you are</span>
+            <h2>Make your next study session easier</h2>
+            <p>Bring your notes and create a simple study guide in seconds.</p>
+          </div>
 
-  <footer class="site-footer"><div class="container footer-wrap"><a class="brand footer-brand" href="index.html"><span class="brand-icon">S</span>Student Study Helper</a><p>Frontend prototype. No login or backend connection is included.</p></div></footer>
-</body>
+          <a class="button button-navy" href="study.html">
+            Create Study Help
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer  -->
+    <footer class="site-footer"></footer>
+  </body>
 </html>

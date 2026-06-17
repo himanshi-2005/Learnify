@@ -1,8 +1,8 @@
-# 📚 Student Study Helper
+# 📚 Learnify: Student Study Helper
 
 ## Overview
 
-Student Study Helper is an AI-powered web application that helps students review course material more efficiently. Users can paste their study notes and generate concise summaries, key points, and review questions with answers. Study sessions can also be saved and viewed later.
+Learnify is an AI-powered web application that helps students review course material more efficiently. Users can paste their study notes and generate concise summaries, key points, and review questions with answers. Study sessions can also be saved and viewed later.
 
 
 

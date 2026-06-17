@@ -1,33 +1,238 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Learn about Student Study Helper, Azure services, and responsible AI.">
-  <title>Student Study Helper | About</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
-</head>
-<body>
-  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-icon">S</span>Student Study Helper</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button><nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="study.html">Study</a><a href="history.html">History</a><a href="about.html">About</a></nav></div></header>
-  <main>
-    <section class="about-hero"><div class="container narrow"><span class="eyebrow">About the project</span><h1>Cloud-powered support for better study sessions</h1><p>Student Study Helper is a cloud-based AI study assistant that helps students turn notes into summaries, key points, and quiz questions.</p></div></section>
-    <section class="container narrow about-content">
-      <article class="about-section"><div class="about-icon">AI</div><div><h2>How It Helps</h2><p>Students paste lecture notes into the study workspace. The application organizes the material into a concise summary, important points, and practice questions that can support revision.</p></div></article>
-      <div class="services-heading"><span class="eyebrow">Cloud architecture</span><h2>Azure Services</h2><p>These services are planned for the connected version of the project.</p></div>
-      <div class="services-grid">
-        <article class="service-card"><span class="service-mark">APP</span><h3>Azure App Service</h3><p>Hosts the web application and makes it available online.</p></article>
-        <article class="service-card"><span class="service-mark">AI</span><h3>Azure AI</h3><p>Analyzes notes and generates summaries, key points, and questions.</p></article>
-        <article class="service-card"><span class="service-mark">DB</span><h3>Azure Storage</h3><p>Saves student notes and generated study results in the cloud.</p></article>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Learn about Learnify, Azure services, and responsible AI."
+    />
+
+    <!-- Page title -->
+    <title>Learnify | About</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Main site navigation -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-icon">L</span>Learnify
+        </a>
+
+        <!-- navigation button -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+
+        <!-- Main navigation links -->
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="study.html">Study</a>
+          <a href="history.html">History</a>
+          <a href="about.html">About</a>
+        </nav>
       </div>
-      <article class="responsible-card">
-        <div class="responsible-heading"><span class="feature-icon yellow">!</span><div><span class="eyebrow">Use AI thoughtfully</span><h2>Responsible AI</h2></div></div>
-        <p>AI is a study aid, not a replacement for course material, instructors, or student judgment.</p>
-        <ul class="responsible-list">
-          <li><span>1</span><div><strong>AI results may not always be perfect</strong><p>Generated content can include mistakes or miss important context.</p></div></li>
-          <li><span>2</span><div><strong>Review summaries and quiz questions</strong><p>Compare every result with your original notes and trusted course resources.</p></div></li>
-          <li><span>3</span><div><strong>Protect private information</strong><p>Do not enter personal, private, confidential, or sensitive information.</p></div></li>
-          <li><span>4</span><div><strong>Human review is important</strong><p>Students remain responsible for deciding whether generated material is accurate and useful.</p></div></li>
-        </ul>
-      </article>
-    </section>
-  </main>
-  <footer class="site-footer"><div class="container footer-wrap"><a class="brand footer-brand" href="index.html"><span class="brand-icon">S</span>Student Study Helper</a><p>Learn smarter. Review responsibly.</p></div></footer>
-</body>
+    </header>
+
+    <main>
+      <!-- Back button to return to the home page -->
+      <a class="back-button" href="index.html" aria-label="Back to home"
+        >&larr;</a
+      >
+
+      <!-- Intro section explaining the purpose of Learnify -->
+      <section class="about-hero">
+        <div class="container narrow">
+          <span class="eyebrow">About the project</span>
+          <h1>Cloud-powered support for better study sessions</h1>
+          <p>
+            Learnify is a cloud-based AI study assistant that helps students
+            turn notes into summaries, key points and quiz questions.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main about page content -->
+      <section class="container narrow about-content">
+        <!-- Explains the main benefit of the application -->
+        <article class="about-section">
+          <div class="about-icon">AI</div>
+          <div>
+            <h2>How It Helps</h2>
+            <p>
+              Students paste lecture notes into the study workspace. The
+              application organizes the material into a concise summary,
+              important points and review questions that can support revision.
+            </p>
+          </div>
+        </article>
+
+        <!-- Step by step workflow for using Learnify -->
+        <section class="learnify-works" aria-labelledby="learnifyWorksTitle">
+          <div class="works-heading">
+            <span class="eyebrow">Study workflow</span>
+            <h2 id="learnifyWorksTitle">How Learnify Works</h2>
+            <p>From lecture notes to study material in a few simple steps.</p>
+          </div>
+
+          <!-- Timeline showing the user journey -->
+          <div class="works-timeline">
+            <article class="works-step">
+              <span class="step-number">1</span>
+              <div>
+                <h3>Paste Notes</h3>
+                <p>User enters or pastes lecture notes into the study page.</p>
+              </div>
+            </article>
+
+            <article class="works-step">
+              <span class="step-number">2</span>
+              <div>
+                <h3>AI Analyzes Content</h3>
+                <p>AI reads the notes and identifies important information.</p>
+              </div>
+            </article>
+
+            <article class="works-step">
+              <span class="step-number">3</span>
+              <div>
+                <h3>Generate Summary</h3>
+                <p>The app creates a short and clear summary of the notes.</p>
+              </div>
+            </article>
+
+            <article class="works-step">
+              <span class="step-number">4</span>
+              <div>
+                <h3>Create Quiz Questions</h3>
+                <p>
+                  The app generates practice questions to help students review.
+                </p>
+              </div>
+            </article>
+
+            <article class="works-step">
+              <span class="step-number">5</span>
+              <div>
+                <h3>Save Study Session</h3>
+                <p>
+                  The notes and AI results can be saved to history for later
+                  review.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Lists the Azure services planned for the cloud version -->
+        <div class="services-heading">
+          <span class="eyebrow">Cloud architecture</span>
+          <h2>Azure Services</h2>
+          <p>
+            These services are planned for the connected version of the project.
+          </p>
+        </div>
+
+        <!-- Azure service cards -->
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-mark">APP</span>
+            <h3>Azure App Service</h3>
+            <p>Hosts the web application and makes it available online.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-mark">AI</span>
+            <h3>Microsoft foundry</h3>
+            <p>
+              Analyzes notes and generates summaries, key points and questions.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-mark">DB</span>
+            <h3>Azure Storage</h3>
+            <p>Saves student notes and generated study results in the cloud.</p>
+          </article>
+        </div>
+
+        <!-- Responsible AI guidance for students -->
+        <article class="responsible-card">
+          <div class="responsible-heading">
+            <span class="feature-icon yellow">!</span>
+            <div>
+              <span class="eyebrow">Use AI thoughtfully</span>
+              <h2>Responsible AI</h2>
+            </div>
+          </div>
+
+          <p>
+            AI is a study aid, not a replacement for course material,
+            instructors or student judgment.
+          </p>
+
+          <!-- Important reminders for safe and responsible AI use -->
+          <ul class="responsible-list">
+            <li>
+              <span>1</span>
+              <div>
+                <strong>AI results may not always be perfect</strong>
+                <p>
+                  Generated content can include mistakes or miss important
+                  context.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span>2</span>
+              <div>
+                <strong>Review summaries and quiz questions</strong>
+                <p>
+                  Compare every result with your original notes and trusted
+                  course resources.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span>3</span>
+              <div>
+                <strong>Protect private information</strong>
+                <p>
+                  Do not enter personal, private, confidential or sensitive
+                  information.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span>4</span>
+              <div>
+                <strong>Human review is important</strong>
+                <p>
+                  Students remain responsible for deciding whether generated
+                  material is accurate and useful.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer"></footer>
+  </body>
 </html>
+
